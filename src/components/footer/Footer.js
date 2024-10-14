@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import {logo} from "../../assets/index"
 
 const Footer = () => {
@@ -8,15 +8,26 @@ const Footer = () => {
       <div className="w-full h-full flex flex-col gap-8">
         <img className="w-32" src={logo} alt="logo" />
         <div className="flex gap-4">
-          <span className="bannerIcon">
-            <FaFacebookF />
-          </span>
-          <span className="bannerIcon">
-            <FaTwitter />
-          </span>
-          <span className="bannerIcon">
-            <FaLinkedinIn />
-          </span>
+        <a href="https://github.com/samarranjit" target="blank">
+              <span className="bannerIcon">
+                <FaGithub />
+              </span>
+            </a>
+            <a href="https://www.instagram.com/rnzt_samar" target="blank">
+              <span className="bannerIcon">
+                <FaInstagram />
+              </span>
+            </a>
+            <a href="https://twitter.com/rnzt_samar" target="blank">
+              <span className="bannerIcon">
+                <FaTwitter />
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/samarranjit/" target="blank">
+              <span className="bannerIcon">
+                <FaLinkedinIn />
+              </span>
+              </a>
         </div>
       </div>
       <div className="w-full h-full">
@@ -56,7 +67,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="w-full h-full">
+      {/* <div className="w-full h-full">
         <h3 className="text-xl uppercase text-designColor tracking-wider">
           RESOURCES
         </h3>
@@ -129,7 +140,7 @@ const Footer = () => {
             </span>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }
