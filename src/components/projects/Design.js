@@ -1,5 +1,4 @@
 import React from 'react'
-import ProjectsCard from './ProjectsCard'
 
 function Design() {
   return (
