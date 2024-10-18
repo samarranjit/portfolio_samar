@@ -21,7 +21,6 @@ const Education = () => {
             title="BS - Computer Science"
             subTitle="Texas State University (August 2024 - Present)"
             // result=""
-            graduated = {false}
             des={
               <>
                 Currently Pursing my Bachelors Degree in Computer Science while exploring the horizon of my interests.
@@ -36,7 +35,6 @@ const Education = () => {
             title="High School - Science"
             subTitle="Xavier International Secondary School (2021 - 2023)"
             result="3.74/4.0"
-            graduated = {true}
             des={
               <>
               Completed my High School studies from Xavier International Secondary School with Physics, Chemistry, Mathematics, Computer Science, English Literature and Nepali Literature.
@@ -52,7 +50,6 @@ const Education = () => {
             title="Secondary School Education"
             subTitle="Vibhuti Vidya Mandir (2007 - 2021)"
             result="4.0/4.0"
-            graduated = {true}
             des={
               <>
                 Studied General Courses and participated in several interschool and intraschool activities.
@@ -67,6 +64,7 @@ const Education = () => {
         </div>
       </div>
       {/* part Two */}
+
 
       
     </motion.div>

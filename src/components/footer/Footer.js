@@ -51,10 +51,13 @@ const Footer = () => {
             </span>
           </li>
           <li>
+            <a href="https://blogs.samarranjit.com.np" target='_blank'>
+
             <span className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer">
               Blog
               
             </span>
+            </a>
           </li>
           <li>
             <span className="w-full text-lg relative hover:text-designColor duration-300 group cursor-pointer">

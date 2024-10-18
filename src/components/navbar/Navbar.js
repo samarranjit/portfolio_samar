@@ -11,26 +11,31 @@ const Navbar = () => {
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div>
-        <img src={logo} alt="logo" className="h-20 sm
-        :ml-4 ml-10 w-auto max-w-full"/>
+        <img src={logo} alt="logo" className="h-20 ml-10 sm:ml-2 w-auto max-w-full"/>
       </div>
       <div>
-        <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
-          {navLinksdata.map(({ _id, title, link }) => (
+      <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
+          {navLinksdata.map(({ _id, title, link, external }) => (
             <li
               className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
               key={_id}
             >
-              <Link
-                activeClass="active"
-                to={link}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                {title}
-              </Link>
+              {external ? (
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                  {title}
+                </a>
+              ) : (
+                <Link
+                  activeClass="active"
+                  to={link}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  {title}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -46,9 +51,8 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Earum soluta perspiciatis molestias enim cum repellat, magnam
-                  exercitationem distinctio aliquid nam.
+                Samar Ranjit is an undergraduate student of Computer Science at Texas State University, and is deeply engaged in exploring web development, software development, data science and designing. He is currently seeking research opportunities and internships to further his expertise and contribute to innovative projects in the field.
+
                 </p>
               </div>
               <ul className="flex flex-col gap-4">
@@ -57,17 +61,23 @@ const Navbar = () => {
                     key={item._id}
                     className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
                   >
-                    <Link
-                      onClick={() => setShowMenu(false)}
-                      activeClass="active"
-                      to={item.link}
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}
-                    >
-                      {item.title}
-                    </Link>
+                    {item.external ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer">
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link
+                        activeClass="active"
+                        to={item.link}
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                    
                   </li>
                 ))}
               </ul>

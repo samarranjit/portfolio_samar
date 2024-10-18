@@ -57,7 +57,7 @@ const Contact = () => {
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
-            <form data-netlify="true" method="POST" onSubmit="submit" name='contact_form' className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
+            <form data-netlify="true" method="POST" className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
               {errMsg && (
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
@@ -74,7 +74,6 @@ const Contact = () => {
                     Your name
                   </p>
                   <input
-                    name='name'
                     onChange={(e) => setUsername(e.target.value)}
                     value={username}
                     className={`${
@@ -89,7 +88,6 @@ const Contact = () => {
                     Phone Number
                   </p>
                   <input
-                  name='number'
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     value={phoneNumber}
                     className={`${
@@ -105,7 +103,6 @@ const Contact = () => {
                   Email
                 </p>
                 <input
-                  name='email'
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
                   className={`${
@@ -120,7 +117,6 @@ const Contact = () => {
                   Subject
                 </p>
                 <input
-                  name='subject'
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
                   className={`${
@@ -135,7 +131,6 @@ const Contact = () => {
                   Message
                 </p>
                 <textarea
-                name='message'
                   onChange={(e) => setMessage(e.target.value)}
                   value={message}
                   className={`${
@@ -149,7 +144,6 @@ const Contact = () => {
                 <button
                   onClick={handleSend}
                   className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
-                  type='submit'
                 >
                   Send Message
                 </button>
