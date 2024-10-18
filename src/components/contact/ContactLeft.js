@@ -16,8 +16,8 @@ const ContactLeft = () => {
           Web Developer || Graphic Designer || Motion Designer
         </p>
         <p className="text-base text-gray-400 tracking-wide">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          ipsam autem cumque, accusantium dicta odio.
+          I would love tohear from you about your feedbacks or opinions! 
+          Feel free to write to me about anything!
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
           Phone: <span className="text-lightText">+1 (512)-210-1702</span>
